@@ -1,0 +1,48 @@
+@use "../foundation/variable" as *;
+
+.rate {
+  position: relative;
+  display: inline-block;
+}
+.rate:before, .rate:after {
+  content: "★★★";
+}
+.rate:before {
+  color: #ccc;
+}
+.rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: $accent-color;
+  overflow: hidden;
+}
+.rate .rate0:after {
+  width: 0;
+}
+.rate .rate1:after {
+  width: 1em;
+}
+.rate .rate2:after {
+  width: 2em;
+}
+.rate .rate3:after {
+  width: 3em;
+}
+
+.skill_l {
+  display: block;  
+  span {
+    position: relative;
+    padding-left: 25px;
+  }
+  p::first-letter {
+    color: $accent-color;
+  }
+}
+.skill_lv:before {
+  content: "･･･";
+  position: absolute;
+  top: 0;
+  left: 0px;
+}

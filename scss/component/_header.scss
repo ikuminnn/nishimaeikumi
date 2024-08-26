@@ -1,0 +1,28 @@
+@use "../foundation/variable" as *;
+
+.fv {
+  perspective: 5px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+.parallax_content {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  padding: 200px 0;
+}
+.parallax_front {
+  transform: translateZ(-5px) scale(5);
+}
+.parallax_back {
+  transform: translateZ(-20px) scale(5);
+}
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+}

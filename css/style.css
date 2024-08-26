@@ -1,0 +1,104 @@
+@charset "UTF-8";
+.fv {
+  perspective: 5px;
+  height: 200px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+}
+
+.parallax_content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 200px 0;
+}
+
+.parallax_front {
+  transform: translateZ(-5px) scale(5);
+}
+
+.parallax_back {
+  transform: translateZ(-20px) scale(5);
+}
+
+.title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  letter-spacing: 5px;
+}
+
+.rate {
+  position: relative;
+  display: inline-block;
+}
+
+.rate:before, .rate:after {
+  content: "★★★";
+}
+
+.rate:before {
+  color: #ccc;
+}
+
+.rate:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #d60206;
+  overflow: hidden;
+}
+
+.rate .rate0:after {
+  width: 0;
+}
+
+.rate .rate1:after {
+  width: 1em;
+}
+
+.rate .rate2:after {
+  width: 2em;
+}
+
+.rate .rate3:after {
+  width: 3em;
+}
+
+.skill_l {
+  display: block;
+}
+.skill_l span {
+  position: relative;
+  padding-left: 25px;
+}
+.skill_l p::first-letter {
+  color: #d60206;
+}
+
+.skill_lv:before {
+  content: "･･･";
+  position: absolute;
+  top: 0;
+  left: 0px;
+}
+
+.works_captions span {
+  position: relative;
+  margin-left: 18px;
+}
+
+.works_caption:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: -10px;
+  width: 1.5px;
+  height: 17px;
+  background-color: #785a46;
+}
+/*# sourceMappingURL=style.css.map */
