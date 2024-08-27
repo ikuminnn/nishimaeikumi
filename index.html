@@ -11,15 +11,13 @@
     <!-- googleフォント -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Klee+One&family=Open+Sans:wdth@75..100&display=swap" rel="stylesheet">
-    <!-- css -->
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPMincho:wght@400;700&family=Open+Sans:wdth@75..100&display=swap" rel="stylesheet">
+    <!-- CSS -->
     <link rel="stylesheet" href="/css/style.min.css">
   </head>
 
   <body>
     <header>
-      <button><span>menu</span></button>
       <div class="fv">
         <div class="parallax_content parallax_back">
           <p class="title">nishimae ikumi</p>
@@ -30,7 +28,12 @@
       </div>
     </header>
     <aside>
-      <nav>
+      <button class="btn">
+        <span class="btn_1 btns"></span>
+        <span class="btn_2">menu</span>
+        <span class="btn_3 btns"></span>
+      </button>
+      <nav class="nav_content">
         <ul>
           <li><a href="#about">About</a></li>
           <li><a href="#skill">Skill</a></li>
@@ -41,35 +44,39 @@
     <main>
       <section class="about">
         <div class="section_title">
-          <p>自己紹介</p>
-          <h3 id="about">About</h3>
+          <p id="about">自己紹介</p>
+          <h3>About</h3>
         </div>
         <div class="about_content">
           <ul>
-            <li>西前 郁美 -にしまえ いくみ-</li>
-            <li>学歴 / 大阪医専 看護保健学科卒業</li>
-            <li>趣味 / バイクツーリング、読書</li>
-            <li>好きな事 / 字を書くこと、ミニオン、寝ること</li>
-            <li>嫌いな事 / 風呂掃除、悪口をいう人、寝れない事</li>
-            <li>ひとこと /</li>
+            <li>西前 郁美<span class="name"></span></li>
+            <li>学歴<span>大阪医専 看護保健学科卒業</span></li>
+            <li>趣味<span>バイクツーリング、読書</span></li>
+            <li>好きな事<span>紙に書くこと、ミニオン、寝ること</span></li>
+            <li>嫌いな事<span>風呂掃除、悪口をいう人、寝れない事</span></li>
+            <li>ひとこと<span></li>
             <p>何事にも楽しくチャレンジし、早く戦力になれるよう
               尽力したいです。
               将来は、Webデザイナーとして縁の下の力持ちに
               なることが目標です。
             </p>
           </ul>
-          <img class="about_img" src="./img/aboutme.JPG">
+          <div class="about_img">
+            <img src="./img/aboutme.jpg" alt="自己紹介写真">
+          </div>
         </div>
       </section>
-      <section>
-        <div class="section_title">
-          <p>できること</p>
-          <h3 id="skill">Skill</h3>
-        </div>
-        <div class="skill_l">
-          <p>★3つ<span class="skill_lv">自信あり</span></p>
-          <p>★2つ<span class="skill_lv">少し得意</span></p>
-          <p>★1つ<span class="skill_lv">これから</span></p>
+      <section class="skill_bg">
+        <div class="skill_box">
+          <div class="section_title">
+            <p id="skill">できること</p>
+            <h3>Skill</h3>
+          </div>
+          <div class="skill_l">
+            <p>★3つ<span class="skill_lv">自信あり</span></p>
+            <p>★2つ<span class="skill_lv">少し得意</span></p>
+            <p>★1つ<span class="skill_lv">これから</span></p>
+          </div>
         </div>
         <div class="skill_content">
           <div class="skill_item">
@@ -96,25 +103,40 @@
       </section>
       <section>
         <div class="section_title">
-          <p>経験</p>
-          <h3 id="works">Works</h3>
+          <p id="works">経験</p>
+          <h3>Works</h3>
         </div>
-        <img class="" src="./img/works1.png" alt="模写課題（PCサイズ）">
+        <div class="works_img1">
+          <img src="./img/works1.png" alt="模写課題（PCサイズ）">
+        </div>
         <div class="works_content">
-          <img class="" src="./img/works2.png" alt="模写課題（スマートフォンサイズ）">
-          <img class="" src="./img/works3.png" alt="模写課題（ハンバーガーメニュー）">
-          <div class="works_captions">
-            <p>サイト名<span class="works_caption">RaiseTech（旧サイト）</span></p>
-            <p>URL<span class="works_caption">課題</span></p>
-            <p>媒体<span class="works_caption">HTML,CSS,JavaScript</span></p>
+          <figure class="works_img2">
+            <img src="./img/works2.png" alt="模写課題（スマートフォンサイズ）">
+          </figure>
+          <div class="works_img3">
+            <img src="./img/works3.png" alt="模写課題（ハンバーガーメニュー）">
           </div>
-          <div>
-            <p>サイトの模写について調べるところから。頑張ったところ、学習を通して学んだことを書く。</p>
+          <div class="works_img4">
+            <div class="works_captions">
+              <p>サイト名<span class="works_caption">RaiseTech（旧サイト）</span></p>
+              <p>URL<span class="works_caption">課題</span></p>
+              <p>媒体<span class="works_caption">HTML,CSS,JavaScript</span></p>
+              <ul>
+                <li>サイトのファーストビューまでを模写する。PC、タブレット、モバイル用のレスポンシブデザイン。</li>
+                <li>メインビジュアルは、3層の画像で構成され、上下スクロールで最下層の画像のみ固定となり立体感のあるデザインになる</li>
+                <li>下２枚はモバイル用。
+                  ヘッダーは固定、右上のハンバーガーメニューをクリックしてメニューが開く。
+                  また、メインメニュー横の＋をホバーするとサブメニューが開き、メインメニュー・サブメニューからマウスが離れるとサブメニューは閉じる。
+                </li>
+                <li>レスポンシブ時に、中央白背景（はじめまして…）がゆっくり可変するようアニメーションをつける</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <script src=""></script>
-    <script src=""></script>
+    <footer class="footer_content"></footer>
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

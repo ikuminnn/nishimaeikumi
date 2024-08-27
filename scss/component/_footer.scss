@@ -1,0 +1,8 @@
+@use "../foundation/variable" as *;
+
+.footer_content {
+  background-color: $accent-color;
+  display: block;
+  width: auto;
+  height: 50px;
+}

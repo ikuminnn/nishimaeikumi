@@ -1,0 +1,35 @@
+@use "./variable" as *;
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100%;
+  font-size: 1.6rem;
+  font-family: "Open Sans", "BIZ UDPMincho", serif;
+  color: $text-color;
+  overflow-x: hidden;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, li {
+  list-style: none;
+}
+
+h3, nav, button {
+  font-family: "BIZ UDPMincho", serif;
+}

@@ -1,0 +1,93 @@
+@use "../foundation/variable" as *;
+
+.nav_content {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: -100%;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffffda;
+  transition: all 0.6s;
+  &.is-open {
+    right: 0;
+  }
+  ul {
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  li {
+    font-size: 2.5rem;
+    color: $text-color;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+.btn {
+  position: fixed;
+  z-index: 9999; // ボタン最前面
+  top: 10px;
+  right: 40px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  &.is-open .btns {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 20px;
+    height: 5px;
+    width: 40px;
+    border-radius: 10px;
+    background-color: $text-color;
+  }
+  &.is-open .btn_1 {
+    top: 26px;
+    transform: rotate(-45deg);
+  }
+  &.is-open .btn_3 {
+    top: 26px;
+    transform: rotate(45deg);
+  }
+  &.is-open .btn_2 {
+    display: none;
+  }
+
+  .btn_2 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: $text-color;
+  }  
+}
+
+
+// .nav_content {
+//   position: fixed;
+//   right: -100%;     /*ハンバーガーボタンがクリックされる前はWindows右側に隠す*/
+//   top: 0;
+//   width: 50%;       /* 出てくるスライドメニューの幅*/
+//   height: 50%;
+//   background-color: gold;
+//   transition: all 0.6s;
+//   z-index: 200;
+//   overflow-y: auto; /* メニューが多くなったらスクロールできるように*/
+//   scrollbar-width: none;
+//   .is-open {
+//     right: 0;
+//   }  
+//   ul {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     padding-top: 100px;
+//     li {
+//       font-size: 2rem;
+//       padding-top: 20px;
+//     }
+//   }
+// }
